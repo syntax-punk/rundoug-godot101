@@ -9,10 +9,10 @@
 [sub_resource type="SpriteFrames" id="SpriteFrames_hc64x"]
 animations = [{
 "frames": [{
-"duration": 0.5,
+"duration": 0.7,
 "texture": ExtResource("2_5huuw")
 }, {
-"duration": 0.5,
+"duration": 0.7,
 "texture": ExtResource("3_p0qql")
 }],
 "loop": true,
@@ -42,6 +42,9 @@ metadata/_edit_group_ = true
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_hc64x")
 animation = &"up"
+frame_progress = 0.914352
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CapsuleShape2D_hmxxn")
+
+[connection signal="body_entered" from="." to="." method="OnBodyEntered"]
